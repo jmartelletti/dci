@@ -59,7 +59,7 @@ module DCI
 
         module_eval %{
           def #{name}=(data)
-            @#{name} = role_#{name}.new(data)
+            @#{name} = role_#{name}.new(data.attributes)
           end
 
           def #{name}
